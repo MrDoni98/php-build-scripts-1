@@ -17,6 +17,7 @@ curl -fsSL http://www.php.net/distributions/php-7.0.10.tar.xz | tar -xJf - --str
     --enable-mbstring \
     --enable-bcmath \
     --enable-sockets \
+    --enable-zip \
     --with-curl \
     --with-libedit \
     --with-openssl \
