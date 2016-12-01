@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Requirements: curl, sudo, tar, building tools
+# Requirements: curl, sudo, tar, building tools, pecl, make
 
 [ -z "${PREFIX}" ] && PREFIX=/usr/local
 [ -w "${PREFIX}" ] || SUDO=sudo
@@ -17,12 +17,13 @@ curl -fsSL http://www.php.net/distributions/php-7.0.10.tar.xz | tar -xJf - --str
     --enable-mbstring \
     --enable-bcmath \
     --enable-sockets \
-    --enable-zip \
-	--enable-libzip \
+    --with-mysqli \
     --with-curl \
     --with-libedit \
+    --with-libcurl \
     --with-openssl \
     --with-zlib \
+    --enable-pcntl \
     --enable-maintainer-zts \
     --prefix="${PREFIX}"
 
